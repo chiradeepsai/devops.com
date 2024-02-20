@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d9d305605e.js" crossorigin="anonymous"></script>
+    <style>
+        .additional-info {
+            display: none;
+        }
+        .header-text p {
+    margin-top: 20px; /* Adjust the value as needed */
+        }
+
+        .header-text h1 {
+    font-size: 30px;
+    margin-top: 10px; /* Adjust the value as needed */
+        }
+</style>
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var learnMoreLinks = document.querySelectorAll('.learn-more-link');
+            var additionalInfoList = document.querySelectorAll('.additional-info');
+    
+            learnMoreLinks.forEach(function (link, index) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default behavior of the anchor link
+    
+                    additionalInfoList.forEach(function (info, infoIndex) {
+                        if (index === infoIndex) {
+                            info.style.display = (info.style.display === 'none' || info.style.display === '') ? 'block' : 'none';
+                        } else {
+                            info.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>     
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo4.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#portfolio">My Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+           <p>DevOps Engineer</p>
+            <h1>Hello, I'm <span>Sai Chandra</span><br>a certified DevOps Engineer based in USA.</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/mypic.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Results-oriented Cloud/DevOps Certified Engineer with a decade of expertise in managing mission-critical server infrastructures. Proficient in AWS and Azure cloud services, specializing in DevOps practices, CI/CD, Kubernetes, Docker, and automation. Strong scripting skills in Python, Bash, PowerShell, and diverse experience in monitoring tools and infrastructure optimization. A collaborative team player with a proven track record of successfully delivering projects in both short and large timeframes.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Operating Systems</span><br>Linux (Red Hat 4/5/6/7), Ubuntu 14/16/18, Windows NT 2000/2003,
+                            CentOS 6, 7, 8.</li>
+                        <li><span>IaaS (Infrastructure as a
+                            Service)
+                            </span><br>Terraform, Ansible, Chef, Puppet</li>
+                        <li><span>Application Servers</span><br>Oracle Web Logic (8/9/10), IBM Web Sphere (5/6/7), JBOSS, Apache
+                            Tomcat</li>
+                        <li><span>Web Servers</span><br>Apache Tomcat, Nginx, WebSphere, WebLogic, JBoss, Samba, SQL
+                            Server</li>
+                        <li><span>Cloud Environments</span><br>Microsoft Azure, Amazon Web Services (AWS), Open Stack, Oracle,
+                            Azure Core</li>
+                        <li><span>AWS Environment </span><br>EC2, S3, Lambda, RDS, VPC, IAM, CloudFormation, Route 53,
+                            CloudWatch, AWS CLI, ECS, EKS, SNS, SQS, DynamoDB, Kinesis,
+                            CloudFront, Direct Connect, Elastic Beanstalk, Glue, CloudTrail,
+                            CloudHSM, Redshift, Neptune, Aurora, Elasticache, Step Functions,
+                            Elastic Load Balancer (ELB), Auto Scaling, Cloud9.</li>
+                        <li><span>Azure Environment</span><br>Virtual Machines, Blob Storage, Azure Functions, Azure SQL Database,
+                            Virtual Network, Azure AD, ARM (Azure Resource Manager), Azure
+                            DNS, Azure Monitor, Azure DevOps, Logic Apps, App Service, Key Vault,
+                            ExpressRoute, HDInsight, Cosmos DB, Service Fabric, AKS (Azure
+                            Kubernetes Service), Azure Container Instances, Cognitive Services,
+                            Azure Automation, Azure Logic Apps, Azure Traffic Manager.</li>
+                        <li><span>GCP Environment</span><br>Compute Engine, Cloud Storage, Cloud Functions, Cloud SQL, VPC, IAM,
+                            Deployment Manager, Cloud DNS, Stackdriver Monitoring, BigQuery,
+                            Kubernetes Engine, Cloud Pub/Sub, Cloud Spanner, App Engine, Cloud
+                            IAP (Identity-Aware Proxy), Memorystore, Anthos, Cloud Composer,
+                            Cloud SCC (Security Command Center), Cloud Build, Cloud Dataprep,
+                            Dataflow, Cloud Storage Transfer Service, Cloud Dataproc, Cloud
+                            Filestore</li>
+                        <li><span>Automation Tools & Version Control Tools</span><br>Git, GitHub, SVN, Bitbucket, Subversion, ECR, VMware, VirtualBox, Citrix, Vagrant</li>
+                        <li><span>Networking Protocols</span><br>DNS, DHCP, FTP/TFTP, NFS, SMTP, TCP/IP, NIS, HTTP/HTTPS, WAN,
+                            LAN, Palo Alto, Cisco Routers/Switches
+                            </li>
+                        <li><span>Containerization Tools</span><br>Docker, Kubernetes, Docker Swarm, OpenShift</li>
+                        <li><span>Performance
+                            Monitoring&Bug
+                            Tracking Tools</span><br>Azure Monitor, CloudWatch, Splunk, Grafana, ELK, Nagios, Jira.VMware
+                            ESXI, Vagrant, Dynatrace</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>July 2022 - January 2024</span><br>Samsung Electronics - Plano, TX</li>
+                        <li><span>October 2021 - June 2022</span><br>Wipro - Austin, TX </li>
+                        <li><span>August 2018 - September 2021</span><br>Capital one - Chicago, IL </li>
+                        <li><span>November 2016 - July 2018</span><br>Intuit - San Diego, CA </li>
+                        <li><span>January 2014 - October 2016</span><br>Charter Communications - Saint Louis, MO</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2013</span><br>Masters in Computer science from University of Texas at Arlington, Texas, USA.</li>
+                        <li><span>2012</span><br>Btech from GITAM University, Vizag, Andhra Pradesh, India.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services---------------- -->
+<div id="Experience">
+    <div class="container">
+        <h1 class="sub-title">My Experience</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-cloud"></i>
+                <h2>Sr DevOps Engineer - Samsung Electronics</h2>
+                <p>Led AWS environment setup, enabling high availability with EC2, VPC, IAM, and more. Played a key role in migrating on-premises VMware Data Center to AWS. Collaborated within a DevOps team using Jenkins, Gerrit, AWS, JIRA, Docker, Kubernetes, and Chef for efficient tool and program development.</p>
+                <a href="#" class="learn-more-link">Learn more</a>
+                <div class="additional-info" style="display: none;">
+                    <h3>Client: Samsung Electronics America, Plano, TX (July 2022 to Jan 2024)</h3>
+                    <h4>Responsibilities:</h4>
+                    <ul>
+                        <li>Established and managed an AWS environment with high availability, utilizing features such as EC2, VPC, IAM, ELB, EBS, SNS, CloudWatch, S3, AMIs, snapshots, RDS, security groups, subnets, and Storage Gateway. Successfully migrated an on-premises VMware Data Center to AWS through Lift and Shift methods.</li>
+                        <li>Functioned as a DevOps Engineer within a team extensively utilizing proprietary and open-source tools like Jenkins, Gerrit, AWS, JIRA, Docker, Kubernetes, and Chef for the development and deployment of internal tools and programs.</li>
+                        <li>Monitored and maintained AWS S3 buckets containing build packets, each with metadata files crucial for flash testing. Configured and managed AWS Lambda functions triggered by Jenkins builds, storing results on S3 buckets. Implemented Route53 for traffic routing between regions, working with Security groups and Network ACLs.</li>
+                        <li>Integrated AWS DynamoDB with Lambda to trigger changes, created Cron jobs for daily batch data pulls, executed continuous integration tests using Jenkins, and backed up DynamoDB streams.</li>
+                        <li>Designed AWS CloudFormation templates for custom-sized VPCs, subnets, and NAT to ensure the successful deployment of web applications.</li>
+                        <li>Implemented Cloud Solutions using various AWS services including EC2, VPC, S3, Glacier, EFS, Kinesis, Lambda, Directory Services, CloudFormation, OpsWorks, CodePipeline, CodeBuild, CodeDeploy, Elastic Beanstalk, RDS, Data Pipeline, DynamoDB, and Redshift.</li>
+                        <li>Scheduled, deployed, and managed container replicas on a node cluster using Kubernetes, contributing to building the Kubernetes runtime environment for the CI/CD system.</li>
+                        <li>Acquired expertise in Private Cloud and Hybrid cloud configurations, patterns, and practices in both Windows Azure and Azure web and database deployments.</li>
+                        <li>Managed, maintained, supported, troubleshooted, and optimized Azure AD environments, suggesting adjustments and new system designs for future needs. Configured, integrated, and managed Azure AD Identities, Groups, App Registrations, and SSO services.</li>
+                        <li>Performed assessments on various environments, providing recommendations for system improvements and optimization. Resolved level 2 and 3 problems and issues related to Azure AD, demonstrating an in-depth understanding of Azure AD Identities, Security Groups, and Azure AD Roles.</li>
+                        <li>Developed and maintained documentation related to the client's Azure Active Directory environments.</li>
+                        <li>Implemented Jenkins as a service inside the Kubernetes cluster to minimize failover downtime and automate Docker container deployment without using configuration management tools.</li>
+                        <li>Installed and utilized Chef Server enterprise on-premises, created various Roles & Environments, and bootstrapped nodes using Knife command. Implemented an ELK (Elastic Logstash Kibana) system to monitor and search enterprise alerts, configuring ELK stack with AWS and using Logstash to output data to S3.</li>
+                        <li>Implemented and optimized AWS SageMaker for machine learning model development and deployment, integrating it seamlessly into the AWS environment with high availability. Utilized EC2, VPC, IAM, ELB, EBS, SNS, CloudWatch, S3, AMIs, snapshots, RDS, security groups, subnets, and Storage Gateway to support Sage Maker functionalities.</li>
+                        <li>Developed PowerShell scripts for project creation, setting permissions in TFS, and automation scripting in Python using Chef for deploying and managing Java and .NET applications across Linux and Windows servers.</li>
+                    </ul>
+                    <h3>Environment:</h3>
+                    <p>Amazon Web Servers (AWS), EC2, OpenStack, Docker, Kubernetes, Chef, Ansible, Jenkins, Maven/ANT, GIT, Elasticsearch, Logstash and Kibana (ELK), JIRA, WebLogic, Apache Tomcat, MongoDB, Linux/RHEL, Vagrant, Active Directory, LDAP, VMWare Servers, Windows, PowerShell, Ruby, YAML, Kafka, Shell, Bash, Python, terraform.</p>
+                </div>
+            </div>            
+            <div>
+                <i class="fa-solid fa-shield"></i>
+                <h2>DevSecOps Engineer - Wipro</h2>
+                <p>Played a key role in implementing security measures, managing user accounts, and automating CI/CD processes 
+                    for AWS and GCP environments. Led the transformation to a DevSecOps model, ensuring secure and efficient 
+                    deployment workflows. Orchestrated the deployment of applications on various cloud services and implemented 
+                    security standards for data management.</p>
+                <a href="#" class="learn-more-link">Learn more</a>
+                <div class="additional-info" style="display: none;">
+                    <h3>Client: Wipro – Austin, TX (October 2021 to June 2022)</h3>
+                    <h4>Responsibilities:</h4>
+                    <ul>
+                        <li>Utilized IAM for AWS and GCP to create roles, users, and groups, implementing Multi-Factor Authentication (MFA) for enhanced security across accounts and resources.</li>
+                        <li>Managed user accounts through IAM, RDS, Route 53, VPC, RDB, DynamoDB, SES, SQS, and SNS services in both AWS and GCP.</li>
+                        <li>Facilitated the transformation and movement of large data volumes into and out of various AWS and GCP data stores and databases, including Amazon S3 and DynamoDB in AWS, and equivalent services in GCP, using EMR for AWS.</li>
+                        <li>Configured Route 53 as the Domain Name Service throughout the enterprise, establishing public and private interfaces for external clients and internal consumers in AWS, and similar DNS configurations in GCP.</li>
+                        <li>Implemented CloudFormation for AWS and equivalent orchestration tools in GCP, automating workflows across every layer (application, network, storage, monitoring, etc.).</li>
+                        <li>Deployed applications onto EC2 Servers in AWS and equivalent services in GCP with zero downtime, leveraging AWS Auto Scaling groups and equivalent tools in GCP, ensuring immutable application release life cycles.</li>
+                        <li>Transformed DevOps methodologies into a DevSecOps model by introducing security and vulnerability scans at different phases of DevOps, including clear text password scans during the build and packaging phase, and pre-provisioning and post-provisioning scans for IAC using tools like Terraform Enterprise (Sentinel) and equivalent frameworks in GCP.</li>
+                        <li>Implemented security standards in data management by applying a KMS encryption strategy for data at rest and SSL encryption layer for data in transit in both AWS and GCP. Developed a workflow for the DevSecOps operating model.</li>
+                        <li>Orchestrated and migrated CI/CD processes using CloudFormation and Terraform templates in AWS, and equivalent tools in GCP, containerizing the infrastructure using Docker set up in Vagrant. Employed Ansible to configure built resources and troubleshoot build issues with ELK.</li>
+                        <li>Managed Kubernetes charts using Helm in GCP, building reproducible Kubernetes application builds, managing Kubernetes manifest files, and Helm package releases.</li>
+                        <li>Managed Docker Containers, Kubernetes Clusters, Mesos, and implemented a production-ready, load-balanced, highly available, and fault-tolerant Kubernetes infrastructure on GCP.</li>
+                        <li>Created Jenkins jobs for deploying applications to the Kubernetes Cluster on GCP.</li>
+                        <li>Integrated Jenkins with Docker containers using CloudBees Docker Pipeline plugin to drive all microservices builds to the Docker Registry on GCP.</li>
+                        <li>Integrated Selenium automation regression test suite into the Jenkins build pipeline to prevent issues in production on both AWS and GCP.</li>
+                        <li>Automated AWS and GCP infrastructure through infrastructure as code, writing various Terraform modules and null resource scripts for creating IAM users, groups, roles, policies, custom policies, AWS Glue, Crawlers, Redshift clusters, snapshots of clusters, EC2, S3 buckets, and application deployments.</li>
+                        <li>Implemented AWS and GCP web application firewalls to monitor web requests forwarded to API Gateways and Application Load Balancers, enhancing the overall security model.</li>
+                        <li>Troubleshooted network issues using DHCP, DIG, DNS, SNMP, SMTP, Ethernet, IOS, netstat, NFS, NIS, nslookup, RIP, OSPF, BGP, TCP/IP, and tcpdump.</li>
+                    </ul>
+                    <!-- Add more sections for other details like technologies used, achievements, etc. -->
+                </div>
+            </div>
+            <div class="container">
+                <i class="fa-brands fa-aws"></i>
+                <h2>AWS Cloud Engineer - Capital One</h2>
+                <p>
+                    Implemented end-to-end infrastructure automation using AWS services such as Elastic Beanstalk, RDS Aurora, Lambda, S3, and Neptune through Terraform. 
+                    Designed and managed Terraform modules, ensuring the support of Dockerized application requirements.
+                </p>
+                <a href="#" class="learn-more-link">Learn more</a>
+                <div class="additional-info" style="display: none;">
+                    <h3>Client: Capital One – Chicago, IL (August 2018 - September 2021)</h3>
+                    <h4>Responsibilities:</h4>
+                    <ul>
+                        <li>Utilized IAM for the creation of roles, users, and groups, implementing Multi-Factor Authentication (MFA) for enhanced security. Managed AWS services, including IAM, RDS, Route 53, VPC, RDB, DynamoDB, SES, SQS, and SNS, ensuring optimal performance and security.</li>
+                        <li>Implemented CloudFormation for AWS orchestration, automating workflows across various layers, such as application, network, storage, and monitoring.</li>
+                        <li>Orchestrated and migrated CI/CD processes using CloudFormation and Terraform templates. Containerized infrastructure using Docker, Helm, and Kubernetes, ensuring efficient deployment and scaling.</li>
+                        <li>Automated AWS infrastructure through infrastructure as code, creating Terraform modules and scripts for AWS IAM, Glue, Crawlers, Redshift clusters, EC2, and S3.</li>
+                        <li>Implemented AWS web application firewalls for effective monitoring of web requests and enhanced security. Troubleshot network issues using various tools and protocols, ensuring seamless operations.</li>
+                        <li>Collaborated with cross-functional teams, integrating Jenkins, Docker, and Ansible for streamlined development, testing, and deployment processes.</li>
+                        <li>Provided expertise in Private Cloud and Hybrid Cloud configurations, patterns, and practices in Windows Azure.</li>
+                        <li>Designed solutions adhering to cloud best practices, optimizing performance, and ensuring cost-effectiveness. Conducted assessments on various environments, providing recommendations for system improvements and optimization.</li>
+                        <li>Maintained documentation related to cloud environments, ensuring knowledge transfer within the team.</li>
+                        <li>Implemented logging, monitoring, and alerting using CloudWatch, SNS, and other AWS services to ensure system reliability and uptime. Set up dashboards and alerts to monitor key metrics.</li>
+                        <li>Architected and optimized AWS infrastructure for high availability, fault tolerance, and scalability. Utilized services like Elastic Load Balancing, Auto Scaling Groups, and Amazon CloudFront.</li>
+                        <li>Migrated legacy workloads to the AWS cloud, determining migration strategy and executing smooth transitions. Decommissioned on-premises data centers when migration complete.</li>
+                        <li>Leveraged AWS managed services like RDS, ElastiCache, and Lambda to reduce administrative overhead. Balanced managed services with provisioning own resources.</li>
+                        <li>Implemented governance policies, tagging standards, and access controls aligned to regulatory, corporate, and data sensitivity requirements.</li>
+                        <li>Ensured automation testing using tools like Selenium to reduce defects and manual testing time.</li>
+                        <li>Worked closely with security and compliance teams to build and validate infrastructure within regulatory guidelines.</li>
+                        <li>Mentored and trained team members on AWS best practices, cloud architecture patterns, security, compliance, and DevOps processes.</li>
+                        <li>Proactively researched and evaluated new AWS platform features and services for integration into infrastructure.</li>
+                        <li>Collaborated with developers and SREs to understand application requirements and translated them into secure, scalable infrastructure.</li>
+                    </ul>
+                    <h3>Environment:</h3>
+                    <p>AWS, Terraform, Docker, Helm, Kubernetes, CloudFormation, IAM, RDS, Route 53, VPC, RDB, DynamoDB, SES, SQS, SNS, AWS Security Hub, AWS Control Tower, Jenkins, Ansible, Splunk, Redshift, Elastic Beanstalk, Maven, Nexus, Amazon ECS, Python, YAML, Bitbucket</p>
+                </div>   
+            </div>
+            <div class="container">
+                <i class="fa-brands fa-microsoft"></i>
+                <h2>Sr Azure Cloud DevOps Engineer - Intuit</h2>
+                <p>
+                    Configured AZURE Virtual Appliances (VMs) to align with security requirements, serving as software-based appliance functions such as firewall, WAN optimization, and intrusion detection.
+                </p>
+                <a href="#" class="learn-more-link">Learn more</a>
+                <div class="additional-info" style="display: none;">
+                    <h3>Client: Intuit – San Diego, CA (November 2016 – July 2018)</h3>
+                    <h4>Responsibilities:</h4>
+                    <ul>
+                        <li>Configured AZURE Virtual Appliances (VMs) to align with security requirements, serving as software-based appliance functions such as firewall, WAN optimization, and intrusion detection.</li>
+                        <li>Established TFS VNext Build agents and Pools, configuring appropriate Build Agent capabilities.</li>
+                        <li>Implemented TeamCity and Octopus build tools and integrated them with TFS.</li>
+                        <li>Developed shell scripts (Bash), Ruby, Python, and PowerShell for task automation.</li>
+                        <li>Automated Weekly releases using ANT/Maven scripting for Compiling Java Code, Debugging, and Placing Builds into Maven Repository.</li>
+                        <li>Possessed an in-depth understanding of Azure AD Identities, Security Groups, and Azure AD Roles.</li>
+                        <li>Had experience with Azure App registrations, SAML SSO, Azure Active Directory Connect, and Azure Portal Administration.</li>
+                        <li>Demonstrated knowledge of Office 365 Management Suite and PowerShell.</li>
+                        <li>Proficiently used Windows applications and Microsoft Office programs, including MS Project, Word, Excel, and PowerPoint.</li>
+                        <li>Worked with Azure Active Directory and Azure Managed Service Identity.</li>
+                        <li>Configured VM's availability sets using the AZURE portal to provide resiliency for IaaS-based solutions and scale sets using AZURE Resource Manager to manage network traffic.</li>
+                        <li>Designed IaaS and PaaS solutions for new clients transitioning from on-site infrastructure to the cloud.</li>
+                        <li>Implemented Micro-services using Pivotal Cloud Foundry (PCF) platform built upon Spring Boot Services and created workflows on TeamCity for setting up automated pipelines for CI/CD with PCF.</li>
+                        <li>Built, implemented, and maintained hardware and software infrastructure to host TFS as a SaaS solution.</li>
+                        <li>Implemented a production-ready, load-balanced, highly available, fault-tolerant Kubernetes infrastructure.</li>
+                        <li>Designed and deployed best SCM processes and procedures.</li>
+                        <li>Utilized Puppet for automating Configuration management and managing Web Applications, Configured Files, Database, Commands, Users Mount Points, and Packages.</li>
+                        <li>Managed local deployments in Kubernetes, creating local clusters and deploying application containers.</li>
+                        <li>Used JAXB 2 for OXM (Object XML Mapping) and Jackson to parse JSON.</li>
+                        <li>Exposed Virtual machines and cloud services in the VNets to the Internet using External Load Balancer.</li>
+                        <li>Possessed extensive experience in Windows AZURE (IaaS), including creating AZURE VMs,</li>
+                    </ul>
+                    <h3>Environment:</h3>
+                    <p>Microsoft Azure (IaaS&PaaS), Jenkins, JIRA, Subversion, AWS Cloud, Puppet, JBoss, MySQL, PostgreSQL, OpenStack, Apache, Nginx, FTP, Splunk, Docker, HTML, HTML5, OWASP, CSS3, Bootstrap, Code igniter, Adobe Fireworks and Sublime Text, Ansible.</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-tower-broadcast"></i>
+                <h2>Sr Cloud Solutions Architect - Charter Communications</h2>
+                <p>Developed capacity and architecture plans for establishing the Azure Cloud environment, hosting the migration of IAAS VMs and PAAS role instances. Enhanced the performance of refactored applications and databases. Established connectivity from Azure to the on-premises data center using Azure ExpressRoute for Single and Multi-subscription connectivity. Provided recommendations for replicating a subset of on-premises machines to Azure Infrastructure as a Service (IAAS) for disaster recovery. Synchronized on-premises data with SQL Server and SharePoint instances hosted in VMs.</p>
+                <a href="#" class="learn-more-link">Learn more</a>
+                <div class="additional-info" style="display: none;">
+                    <h3>Client: Charter Communications - Saint Louis, MO (January 2014 - October 2016)</h3>
+                    <h4>Responsibilities:</h4>
+                    <ul>
+                        <li>Utilized Azure Site Recovery and Azure Backup to deploy instances on Azure environments and migrate data centers to Azure. Collected and analyzed data from all Azure Resources using Log Analytics to resolve issues.</li>
+                        <li>Configured Azure Multi-Factor Authentication (MFA) for secure user authentication. Created custom Azure templates for quick deployments and advanced PowerShell scripting. Deployed Azure SQL DB with Sync to a standby database in another region and failover configuration.</li>
+                        <li>Managed and maintained Azure Infrastructure, including Azure Web Roles, Worker Roles, VM Role, Azure SQL, Azure Storage, Azure AD Licenses, Virtual Machine Backup, and Recovery from a Recovery Services Vault using Azure PowerShell and Azure Portal.</li>
+                        <li>Implemented Azure Role-based Access Control (RBAC) to segregate duties within the team and grant limited access to users as needed.</li>
+                        <li>Developed Templates for Azure Infrastructure as code using Terraform for building staging and production environments. Integrated Azure Log Analytics with Azure Virtual Machines for monitoring logs, storing them, and tracking metrics using Terraform. Managed multiple infrastructure resources like Cloud, VMware, and Docker containers.</li>
+                        <li>Worked on Azure suite including Azure SQL Database, Azure Data Lake, Azure Data Factory, Azure SQL Data Warehouse, Azure Analysis Service.</li>
+                        <li>Worked on Site-to-site and Point-to-Site VPNs, Virtual Networks, Network Security Groups, Load balancers, Storage Accounts. Configured RBAC and Azure Monitor for adding security in Azure Cloud and Network Security Groups for Subnet and NIC level for Azure Virtual Machine.</li>
+                        <li>Expert on Serverless services, created and configured HTTP Triggers in the Azure Functions with application insights for monitoring and performing load testing on the applications using the Visual Studio Team Services (VSTS) also called as Azure DevOps Services.</li>
+                        <li>Deployed and optimized two-tier Java, Python web applications to Azure DevOps CI/CD to focus on development. Used services such as Repos to commit codes, Test Plans to unit test, deploy App Service, Azure Application Insight collects health performance and usage data of the process, stored artifacts in blob storages.</li>
+                        <li>Worked on PowerShell Script to automate Windows patching and created the release in Azure DevOps pipeline.</li>
+                        <li>Deployed Windows Kubernetes (K8s) cluster with Azure Container Service (ACS), Azure CLI, and Utilized Kubernetes and Docker for the runtime environment of the CI/CD system to build, test and Octopus Deploy. Worked on OpenShift for container orchestration with Kubernetes container storage.</li>
+                        <li>Used Ansible for creating multiple playbooks for Resource creations and SQL server, cluster server, and my SQL installations.</li>
+                        <li>Used Ansible to Setup/teardown of ELK stack (Elasticsearch, Logstash, Kibana) and troubleshoot build issues with ELK and work towards effective solutions.</li>
+                        <li>Managed Kubernetes charts using Helm, created reproducible builds of Kubernetes applications, Managed Kubernetes manifest files, and Managed releases of Helm packages.</li>
+                        <li>Implemented Docker-maven-plugin in Maven pom.xml files to build Docker images for all microservices and later used Docker files to build Docker images from the Java jar files.</li>
+                        <li>Designed, wrote, and maintained systems using Python scripting for administering GIT, through Jenkins as a full cycle continuous delivery tool, involving package creation, distribution, and deployment onto Tomcat application servers via shell scripts embedded into Jenkins jobs.</li>
+                        <li>Maintained Artifacts in binary repositories using JFrog Artifactory and pushed new Artifacts by configuring the Jenkins project using Jenkins Artifactory plugin.</li>
+                        <li>Worked on Jira as a defect tracking system and configured various workflows, customizations, and plugins for Jira bug/issue tracker. Integrated Jenkins with Jira, GitHub.</li>
+                        <li>Worked with Nagios for Azure Active Directory and LDAP and Data consolidation for LDAP users. Monitored system performance using Nagios, maintained Nagios servers, added new services & servers, and built and managed a highly available monitoring infrastructure to monitor different application servers like JBoss, Apache Tomcat and its components using Nagios.</li>
+                    </ul>
+                    <h3>Environment:</h3>
+                    <p>Azure, PCF, Office 365, Terraform, Maven, Jenkins, Ansible, EC2, S3, Azure ARM, Azure AD, Kubernetes, Python, Ruby, XML, Shell Scripting, PowerShell, .Net, Nexus, JFrog Artifactory, Git, Jira, GitHub, Docker, Windows Server, TFS, VSTS, LDAP, Nagios, Splunk.</p>
+                </div>
+            </div>            
+                        
+ </div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Certifications</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/certificationGCP.png">
+                <div class="layer">
+                    <h3></h3>
+                    <p>As a Professional Cloud Architect I enable organizations to leverage Google Cloud technologies. I design, develop, secure, scalable, highly available, and dynamic solutions to drive business objectives. Verify Below</p>
+                    <a href="https://google.accredible.com/2caa3065-2a91-4ba6-9f0a-1655ba04d3b3" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Visit AWS Certification</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/aws sol.png">
+                <div class="layer">
+                    <h3></h3>
+                    <p>As a  AWS certified architect I possess strong knowledge and skills in AWS technology, across a wide range of AWS services. I work on the design of cost and performance optimized solutions and have a strong understanding of the AWS Well-Architected Framework. </p>
+                    <a href="https://www.credly.com/badges/e83d5eb0-0623-40de-a3a8-53306a9dcbe0/public_url" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Visit AWS Certification</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/aws cp.png">
+                <div class="layer">
+                    <h3></h3>
+                    <p>As an AWS Certified Cloud Practitioner, I demonstrate foundational knowledge of AWS cloud services, enabling me to effectively navigate the AWS and contribute to cloud-based solutions with a solid understanding of AWS best practices. Verify Below</p>
+                    <a href="https://www.credly.com/badges/3b97a46d-c6b1-4b46-82ba-5473f707a816/public_url" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Visit AWS Certification</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/azure devops.png">
+                <div class="layer">
+                    <h3></h3>
+                    <p>As a Microsoft Certified DevOps Engineer, I specialize in designing and implementing efficient DevOps practices, integrating people, processes, and technologies. Verify Below</p>
+                    <a href="https://learn.microsoft.com/en-us/users/chiradeepsaichandragummadi-7188/transcript/734p4f8wlpjzo20" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Visit AWS Certification</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/azure admin.png">
+                <div class="layer">
+                    <h3></h3>
+                    <p>As a certified Azure Administrator, I proficiently manage Azure environments. My responsibilities span infrastructure deployment, Azure AD management and implementing best practices for a seamless cloud experience.</p>
+                    <a href="https://learn.microsoft.com/en-us/users/chiradeepsaichandragummadi-7188/transcript/734p4f8wlpjzo20" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Visit AWS Certification</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/terraform c.png">
+                <div class="layer">
+                    <h3></h3>
+                    <p>As a certified Terraform Associate, I specialize in Infrastructure as Code (IaC) and manage cloud infrastructure efficiently. My expertise includes creating and maintaining infrastructure configurations and implementing best practices for seamless cloud deployment.</p>
+                    <a href="https://www.hashicorp.com/certification/terraform-associate" target="_blank"><i class="fa-solid fa-external-link-alt"></i> Visit AWS Certification</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> chandra.kancharla7@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +1(469)-616-3688</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/gumadi-chandra-b64b5119a/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:chandra.kancharla7@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <a href="images/Sai Chandra Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Thank you for visiting my portfolio. Feel free to reach out for any job opportunities or collaborations. I look forward to hearing from you! </p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwPNkYbAOKioVxRXYwhwe38N_7nRTKSUYMj0nftSfKQGENhgYGwVolE1pF2nq6zYbs/exec' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
